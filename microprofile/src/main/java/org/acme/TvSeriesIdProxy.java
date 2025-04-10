@@ -13,15 +13,15 @@ public interface TvSeriesIdProxy {
 
   //https://api.tvmaze.com/shows/120
   // base url    + shows + id
-
+  //https://localhost:8080/tvseries/{id}
   @GET
   @Path("shows/{id}")
   TvSeries getTvSeriesById(@PathParam("id") int id);
 
-
+  //https://localhost:8080/tvseries/person/{personname}
   //https://api.tvmaze.com/search/people?q=lauren
   @GET
-  @Path("search/people/")
+  @Path("search/people")
   JsonArray getTvSeriesByPersonName(@QueryParam("q") String personName);
 
 }

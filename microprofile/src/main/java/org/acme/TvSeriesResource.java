@@ -26,7 +26,7 @@ public class TvSeriesResource {
   //https://api.tvmaze.com/search/people?q=lauren
     @GET
     @Path("/person/{personname}")
-    public JsonArray getTvSeriesByPerson(@PathParam("personname") String personName) {
+    private JsonArray getTvSeriesByPerson(@PathParam("personname") String personName) {
       return proxy.getTvSeriesByPersonName(personName);
 
     }
